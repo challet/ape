@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scripting &mdash; ape  documentation</title>
-  <link rel="stylesheet" href="/ape/latest/_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="/ape/latest/_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="/ape/latest/_static/custom.css" type="text/css" />
       <link rel="stylesheet" href="/ape/latest/_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="/ape/latest/_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="/ape/latest/_static/custom.css" type="text/css" />
@@ -16,11 +13,12 @@
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script data-domain="docs.apeworx.io" defer="defer" src="https://plausible.io/js/script.js"></script>
     <script src="../_static/js/theme.js"></script>
     <script src="../_static/custom.js"></script>
   <script>
@@ -28,7 +26,7 @@
   </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="accounts" href="../commands/accounts.html" />
+    <link rel="next" title="Publishing" href="publishing.html" />
     <link rel="prev" title="Testing" href="testing.html" /> 
 </head>
 
@@ -37,8 +35,12 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> ape
-            <img src="../_static/logo.gif" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ape
+              <img src="../_static/logo.gif" class="logo" alt="Logo"/>
           </a>
 
           <div class="version">
@@ -51,19 +53,20 @@
           </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div>
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Main">
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accounts.html">Accounts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installing_plugins.html">Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Developing Projects with Ape</a></li>
 <li class="toctree-l1"><a class="reference internal" href="compile.html">Compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cache.html">Cache</a></li>
 <li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="developing_plugins.html">Developing Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config.html">Configure Ape</a></li>
@@ -76,6 +79,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#main-method-scripts">Main Method Scripts</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Publishing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">CLI Reference</span></p>
 <ul>
@@ -105,8 +109,7 @@
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" aria-label="Top" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">ape</a>
       </nav>
@@ -115,8 +118,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Scripting</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Scripting</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/userguides/scripts.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -127,11 +130,11 @@
            <div itemprop="articleBody">
              
   <section id="scripting">
-<h1>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline"></a></h1>
+<h1>Scripting<a class="headerlink" href="#scripting" title="Permalink to this heading"></a></h1>
 <p>You can write scripts that run using the <code class="docutils literal notranslate"><span class="pre">ape</span> <span class="pre">run</span></code> command.
 The <code class="docutils literal notranslate"><span class="pre">ape</span> <span class="pre">run</span></code> command will register and run Python files defined under the <code class="docutils literal notranslate"><span class="pre">scripts/</span></code> directory that do not start with an <code class="docutils literal notranslate"><span class="pre">_</span></code> underscore.</p>
 <section id="cli-scripts">
-<h2>CLI Scripts<a class="headerlink" href="#cli-scripts" title="Permalink to this headline"></a></h2>
+<h2>CLI Scripts<a class="headerlink" href="#cli-scripts" title="Permalink to this heading"></a></h2>
 <p>Place scripts in your project’s <code class="docutils literal notranslate"><span class="pre">scripts/</span></code> directory.
 Follow <a class="reference external" href="./projects.html">this guide</a> to learn more about the Ape project structure.
 If your scripts take advantage of utilities from our <a class="reference external" href="../methoddocs/cli.html#ape-cli"><code class="docutils literal notranslate"><span class="pre">ape.cli</span></code></a> submodule, you can build a <a class="reference external" href="https://click.palletsprojects.com/">Click</a> command line interface by defining a <code class="docutils literal notranslate"><span class="pre">click.Command</span></code> or <code class="docutils literal notranslate"><span class="pre">click.Group</span></code> object called <code class="docutils literal notranslate"><span class="pre">cli</span></code> in your file:</p>
@@ -144,7 +147,12 @@ If your scripts take advantage of utilities from our <a class="reference externa
 </div>
 <p>Assume we named the script <code class="docutils literal notranslate"><span class="pre">helloworld.py</span></code>.
 To execute the script, run the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ape run helloworld
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ape<span class="w"> </span>run<span class="w"> </span>helloworld
+</pre></div>
+</div>
+<p>You can also execute scripts in subdirectories.
+For example, assuming we have script <code class="docutils literal notranslate"><span class="pre">&lt;project&gt;/scripts/hello/helloworld.py</span></code>, we would execute it by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ape<span class="w"> </span>run<span class="w"> </span>hello<span class="w"> </span>helloworld
 </pre></div>
 </div>
 <p>Note that by default, <code class="docutils literal notranslate"><span class="pre">cli</span></code> scripts do not have <a class="reference external" href="../methoddocs/cli.html?highlight=options#ape.cli.options.network_option"><code class="docutils literal notranslate"><span class="pre">ape.cli.network_option</span></code></a> installed, giving you more flexibility in how you define your scripts.
@@ -161,12 +169,12 @@ However, you can add the <code class="docutils literal notranslate"><span class=
 </div>
 <p>Assume we saved this script as <code class="docutils literal notranslate"><span class="pre">shownet.py</span></code> and have the <a class="reference external" href="https://github.com/ApeWorX/ape-alchemy">ape-alchemy</a> plugin installed.
 Try changing the network using the <code class="docutils literal notranslate"><span class="pre">--network</span></code> option:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ape run shownet --network ethereum:mainnet:alchemy
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ape<span class="w"> </span>run<span class="w"> </span>shownet<span class="w"> </span>--network<span class="w"> </span>ethereum:mainnet:alchemy
 </pre></div>
 </div>
 </section>
 <section id="main-method-scripts">
-<h2>Main Method Scripts<a class="headerlink" href="#main-method-scripts" title="Permalink to this headline"></a></h2>
+<h2>Main Method Scripts<a class="headerlink" href="#main-method-scripts" title="Permalink to this heading"></a></h2>
 <p>You can also use the main-method approach when defining scripts.
 To do this, define a method named <code class="docutils literal notranslate"><span class="pre">main()</span></code> in your script:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -194,13 +202,13 @@ To do this, define a method named <code class="docutils literal notranslate"><sp
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="testing.html" class="btn btn-neutral float-left" title="Testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../commands/accounts.html" class="btn btn-neutral float-right" title="accounts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="publishing.html" class="btn btn-neutral float-right" title="Publishing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, ApeWorX LTD.</p>
+    <p>&#169; Copyright 2023, ApeWorX LTD.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
